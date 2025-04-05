@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+/* src/pages/Home.css */
+
+.home {
+  height: 100vh;
+  background-image: url('/home-page.jpg');  
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-family: 'Koulen', sans-serif;
+  color: white;
+  font-size: 60px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+}
+
