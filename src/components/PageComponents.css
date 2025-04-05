@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Marcellus&display=swap');
+
+.page-container {
+  padding: 120px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Global styling to be applied to all pages */
+body {
+  background-color: #1a1a1a;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.7)),
+    url('/subtle-steel-texture.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+}
+
+/* Alternative gradient if no texture image is available */
+body.gradient-only {
+  background-image: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+}
+
+.page-title {
+  font-family: 'Koulen', sans-serif;
+  font-size: 42px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #fff;
+  opacity: 0.6;
+}
+
+.content-section {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  line-height: 1.6;
+}
+
+/* Styling for paragraphs, lists, etc. */
+.content-section p {
+  margin-bottom: 20px;
+}
+
+.content-section a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.content-section a:hover {
+  opacity: 0.8;
+}
+
+/* Design accents */
+.page-container::before {
+  content: '';
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  width: 3px;
+  height: 40px;
+  background-color: #fff;
+  opacity: 0.4;
+}
+
+.page-container::after {
+  content: '';
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  width: 3px;
+  height: 40px;
+  background-color: #fff;
+  opacity: 0.4;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 100px 15px 30px;
+  }
+  
+  .page-title {
+    font-size: 36px;
+  }
+  
+  .content-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 30px;
+  }
+  
+  .page-container::before,
+  .page-container::after {
+    display: none;
+  }
+}

@@ -1,0 +1,90 @@
+/* src/Global.css */
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Marcellus&display=swap');
+
+/* Global styling for all pages except home (which has its own specific styling) */
+body {
+  font-family: 'Marcellus', serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  background-attachment: fixed;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Only style pages other than home */
+.page {
+  padding: 120px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+h1, h2, h3 {
+  font-family: 'Koulen', sans-serif;
+}
+
+.page-title {
+  font-size: 42px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #fff;
+  opacity: 0.6;
+}
+
+.content-section {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Links styling */
+a {
+  color: #fff;
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .page {
+    padding: 100px 15px 30px;
+  }
+  
+  .page-title {
+    font-size: 36px;
+  }
+  
+  .content-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 30px;
+  }
+}

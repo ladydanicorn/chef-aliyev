@@ -8,6 +8,7 @@ import Events from './pages/Events';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import './index.css';
+import './Global.css'; // Import the new global CSS
 
 function App() {
   return (

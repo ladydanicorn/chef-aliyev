@@ -1,0 +1,226 @@
+/* src/pages/Contact.css */
+
+.intro-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px;
+  }
+  
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  /* Contact Info Section */
+  .contact-info {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .info-section {
+    margin-bottom: 25px;
+  }
+  
+  .info-section h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  
+  .info-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+  
+  .info-section p {
+    line-height: 1.6;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+    padding-top: 20px;
+  }
+  
+  .social-icon {
+    font-style: normal;
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover .social-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Contact Form Section */
+  .contact-form-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group:nth-child(5) {
+    grid-column: span 2;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    font-weight: normal;
+  }
+  
+  .required {
+    color: #e57373;
+  }
+  
+  input, textarea {
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: white;
+    font-family: inherit;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  input.error, textarea.error {
+    border-color: #e57373;
+  }
+  
+  .error-message {
+    color: #e57373;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .submit-btn {
+    grid-column: span 2;
+    padding: 12px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .submit-btn:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .form-status-message {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Success Message */
+  .success-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 30px;
+  }
+  
+  .success-message h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .success-message p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .send-another-btn {
+    padding: 12px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .send-another-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 900px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+      padding: 25px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .contact-form {
+      grid-template-columns: 1fr;
+    }
+    
+    .form-group:nth-child(5) {
+      grid-column: 1;
+    }
+    
+    .submit-btn {
+      grid-column: 1;
+    }
+    
+    .form-status-message {
+      grid-column: 1;
+    }
+  }
