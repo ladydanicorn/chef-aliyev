@@ -1,0 +1,62 @@
+.translate-button-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Style the select dropdown */
+  .goog-te-gadget .goog-te-combo {
+    margin: 4px 0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-family: 'Marcellus', serif;
+    font-size: 14px;
+    min-width: 150px;
+  }
+  
+  /* Make options in dropdown visible */
+  .goog-te-combo option {
+    background-color: #333;
+    color: white;
+    font-family: 'Marcellus', serif;
+  }
+  
+  /* Main widget text */
+  .goog-te-gadget {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-family: 'Marcellus', serif !important;
+    font-size: 12px !important;
+  }
+  
+  /* Hide Google's default image */
+  .goog-te-gadget img {
+    display: none !important;
+  }
+  
+  /* Style the "Powered by" text */
+  .goog-te-gadget span a {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 11px !important;
+  }
+  
+  /* Add a text label next to the dropdown */
+  .goog-te-gadget::before {
+    content: "Language: ";
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* For mobile screens */
+  @media (max-width: 768px) {
+    .translate-button-container {
+      top: 70px;
+      right: 10px;
+    }
+  }

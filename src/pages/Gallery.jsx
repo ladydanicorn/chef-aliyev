@@ -4,7 +4,6 @@ import './Gallery.css';
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   
-  // Gallery images with descriptions
   const galleryImages = [
     {
       id: 1,

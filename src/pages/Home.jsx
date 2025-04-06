@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import './Home.css';
 
 export default function Home() {

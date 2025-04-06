@@ -2,7 +2,6 @@ import React from 'react';
 import './Events.css';
 
 export default function Events() {
-  // Store the calendar URL in a variable to prevent escaping issues
   const calendarUrl = "https://calendar.google.com/calendar/embed?src=efbbf254a4e9f87a2dedeb0654c2334996671047bf7206a85f18e9cd8265408c%40group.calendar.google.com&ctz=America%2FNew_York";
   
   return (
