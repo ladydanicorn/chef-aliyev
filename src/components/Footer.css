@@ -1,0 +1,68 @@
+/* src/components/Footer.css */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
+.footer {
+  margin-top: auto;
+  width: 100%;
+  padding: 10px 0; /* Reduced padding */
+  background: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 12px; /* Smaller text */
+  color: rgba(255, 255, 255, 0.4);
+  font-family: 'Koulen', serif; 
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  flex-grow: 1;
+  text-align: center; /* Centered text */
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.spacer {
+  width: 72px; /* Same width as social links section for balance */
+}
+
+.social-icon {
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .social-links {
+    order: 2;
+  }
+  
+  .copyright {
+    order: 1;
+  }
+  
+  .spacer {
+    display: none;
+  }
+}
