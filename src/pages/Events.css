@@ -1,39 +1,68 @@
+/* General spacing and font styles */
+.page {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-family: 'Marcellus', serif;
+}
+
+/* Section intro text */
 .events-intro {
-    text-align: center;
-    line-height: 1.6;
-  }
-  
+  text-align: center;
+  line-height: 1.6;
+  color: #e0e0e0; /* ✨ Lightened for better contrast */
+}
+
+/* Headings */
+.page-title,
+.page h2,
+.page h3 {
+  font-family: 'Koulen', sans-serif;
+  color: #e0e0e0; /* ✨ Light gray for all headings */
+  text-align: center;
+}
+
+/* Paragraph text */
+.page p {
+  color: #e0e0e0; /* ✨ Light gray for body text */
+  font-size: 18px;
+  text-align: justify;
+}
+
+/* Calendar container styling */
+.calendar-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 65%; /* Aspect ratio for the calendar */
+  margin-bottom: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Kept this for subtle frame */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Embedded calendar iframe */
+.calendar-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive calendar sizing */
+@media (max-width: 768px) {
   .calendar-container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 65%; /* Aspect ratio for the calendar */
-    margin-bottom: 30px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    background-color: rgba(0, 0, 0, 0.3);
+    padding-bottom: 80%;
   }
-  
-  .calendar-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+}
+
+@media (max-width: 480px) {
+  .calendar-container {
+    padding-bottom: 120%;
   }
-  
-  /* Media Queries for Calendar */
-  @media (max-width: 768px) {
-    .calendar-container {
-      padding-bottom: 80%; /* Taller aspect ratio for mobile */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .calendar-container {
-      padding-bottom: 120%; /* Even taller for small screens */
-    }
-  }
+}

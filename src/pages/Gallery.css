@@ -1,165 +1,187 @@
+.page {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Marcellus', serif;
+}
+
+/* Intro paragraph above gallery */
 .intro-section {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 30px;
-  }
-  
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: #e0e0e0; /* ✨ Lightened text */
+}
+
+/* Headings */
+.page-title {
+  text-align: center;
+  font-family: 'Koulen', sans-serif;
+  font-size: 42px;
+  color: #e0e0e0; /* ✨ Light gray heading */
+  margin-bottom: 30px;
+}
+
+/* Gallery grid layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+/* Gallery item containers */
+.gallery-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay gradient and title on hover */
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-title {
+  color: #e0e0e0; /* ✨ Replaced white with light gray */
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content img {
+  width: 100%;
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
+
+.modal-description {
+  padding: 20px;
+  color: #e0e0e0; /* ✨ Light gray text for modal */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-description h3 {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #e0e0e0; /* ✨ Heading inside modal */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #e0e0e0; /* ✨ Icon color */
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
   }
-  
-  .gallery-item {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .gallery-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .image-container {
-    position: relative;
-    padding-bottom: 75%; /* 4:3 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-  }
-  
-  .image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-  
-  .gallery-item:hover img {
-    transform: scale(1.05);
-  }
-  
-  .image-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .gallery-item:hover .image-overlay {
-    opacity: 1;
-  }
-  
-  .image-title {
-    color: white;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* Modal Styles */
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
-  }
-  
+
   .modal-content {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    animation: modalFadeIn 0.3s ease;
+    max-width: 95%;
   }
-  
-  @keyframes modalFadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+
+  .image-overlay {
+    opacity: 1;
+    padding: 10px;
   }
-  
-  .modal-content img {
-    width: 100%;
-    display: block;
-    border-radius: 8px 8px 0 0;
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
-  
-  .modal-description {
-    padding: 20px;
-    color: white;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
+
   .modal-description h3 {
-    margin-top: 0;
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 20px;
   }
-  
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 10;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-  }
-  
-  .close-button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .gallery-grid {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 15px;
-    }
-    
-    .modal-content {
-      max-width: 95%;
-    }
-    
-    .image-overlay {
-      opacity: 1;
-      padding: 10px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .gallery-grid {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-    
-    .modal-description h3 {
-      font-size: 20px;
-    }
-  }
+}

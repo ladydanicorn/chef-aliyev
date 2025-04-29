@@ -1,46 +1,31 @@
-import React from 'react';
+import './About.css';
 
 export default function About() {
   return (
-    <div className="page">
-      <h1 className="page-title">About</h1>
-      
+    <div className="page about">
+      <h1 className="page-title">About the Chef</h1>
+
       <div className="content-section">
-        <h2>Meet Aykhan Aliyev</h2>
         <p>
-          Passionate about culinary excellence and creating memorable experiences, 
-          Aykhan brings expertise and creativity to every dish he creates.
+          Aykhan Aliyev is a Baku-born chef known for pairing refined technique with fearless creativity.
+          He began his culinary journey as the owner of a successful poké bowl restaurant in Baku, but soon set his sights beyond fast-casual dining.
+          His desire to deepen his craft led him to France, where he studied gastronomy at the prestigious <strong>Gastronomicom</strong> culinary school in Adge.
         </p>
+
         <p>
-          With a background in [relevant experience/education], Aykhan has developed 
-          a unique approach to [cooking style/specialty] that combines traditional techniques 
-          with innovative twists.
+          After completing his training, Aykhan joined the kitchen team at <strong>La Ferme Chapouton</strong>,
+          a Michelin Bib Gourmand restaurant in Grignan, where he developed a sharper eye for seasonality,
+          plating, and detail under the guidance of a seasoned brigade.
         </p>
-      </div>
-      
-      <div className="content-section">
-        <h2>Philosophy</h2>
+
         <p>
-          Aykhan believes in using only the finest ingredients, sourced locally whenever possible, 
-          to create dishes that not only taste exceptional but also tell a story.
+          He returned to Azerbaijan with a vision to blend his classical training with global influences.
+          As the founding sous chef of <strong>Bitter Baku</strong>, he helped shape one of the city’s most sought-after restaurants—delivering a menu that rotates seasonally and walks the line between elevated bar food and fine dining.
         </p>
+
         <p>
-          Every menu is carefully crafted to provide a balance of flavors and textures 
-          that complement each other and create a harmonious dining experience.
-        </p>
-      </div>
-      
-      <div className="content-section">
-        <h2>Experience</h2>
-        <p>
-          With [X] years of experience in the culinary world, Aykhan has worked in 
-          [relevant establishments/experiences] where he refined his skills and 
-          developed his unique culinary style.
-        </p>
-        <p>
-          Specializing in [cuisine types/specialties], Aykhan continues to explore 
-          new techniques and flavor combinations to bring fresh and exciting dishes 
-          to his clients.
+          His culinary style draws on his international travels, a deep respect for French technique,
+          and a love for bold, unexpected flavors. Whether in a bustling kitchen or designing a private dinner menu, Aykhan is always crafting food with intention, curiosity, and precision.
         </p>
       </div>
     </div>
